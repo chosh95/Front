@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Circle 객체</title>
+	<style>
+		body { text-align: center; font-size:1.2em; line-height: 2em;}
+	</style>
+</head>
+<body>
+	<script>
+		var r = prompt("원의 반지름은? (cm)");
+		function Circle(len){
+			this.len = len;
+			this.callen = function(){
+				return 2*Math.PI*this.len;
+			}
+			this.calw = function(){
+				return this.len*this.len*Math.PI;
+			}
+		}
+		var circle = new Circle(r);
+		document.write(circle.len + " " +  circle.callen(), circle.calw());
+	</script>
+</body>
+</html>
